@@ -155,10 +155,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: blue,
                           boxShadow: [
                             BoxShadow(
-                                spreadRadius: 0,
-                                offset: Offset(0, 10),
-                                blurRadius: 0,
-                                color: blue.withOpacity(0.4))
+                              spreadRadius: 0,
+                              offset: Offset(0, 10),
+                              blurRadius: 0,
+                              color: blue.withOpacity(0.4),
+                            ),
                           ],
                         ),
                         child: Column(
@@ -237,7 +238,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        width: 10,
                       ),
                       Column(
                         children: [
@@ -253,6 +254,155 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Radius.circular(30),
                               ),
                               color: green,
+                              boxShadow: [
+                                BoxShadow(
+                                  spreadRadius: 0,
+                                  offset: Offset(0, 10),
+                                  blurRadius: 0,
+                                  color: green.withOpacity(0.4),
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            "asset/images/food2.png"),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Text(
+                                  "Nishio Sushi",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.35,
+                            height: 165,
+                            padding: EdgeInsets.symmetric(
+                              vertical: 20,
+                              horizontal: 20,
+                            ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(30),
+                              ),
+                              color: green,
+                              boxShadow: [
+                                BoxShadow(
+                                  spreadRadius: 0,
+                                  offset: Offset(0, 10),
+                                  blurRadius: 0,
+                                  color: green.withOpacity(0.4),
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            "asset/images/food2.png"),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Text(
+                                  "Nishio Sushi",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         ],
