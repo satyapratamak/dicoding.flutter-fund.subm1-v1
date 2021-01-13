@@ -336,13 +336,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               borderRadius: BorderRadius.all(
                                 Radius.circular(30),
                               ),
-                              color: green,
+                              color: black,
                               boxShadow: [
                                 BoxShadow(
                                   spreadRadius: 0,
                                   offset: Offset(0, 10),
                                   blurRadius: 0,
-                                  color: green.withOpacity(0.4),
+                                  color: black.withOpacity(0.4),
                                 ),
                               ],
                             ),
@@ -354,7 +354,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                         image: AssetImage(
-                                            "asset/images/food2.png"),
+                                            "asset/images/food3.png"),
                                       ),
                                     ),
                                   ),
@@ -363,7 +363,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   height: 15,
                                 ),
                                 Text(
-                                  "Nishio Sushi",
+                                  "Supreme Sushi",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -409,7 +409,36 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      "Places",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        height: 0.5,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                placesWidget("hotel1", "Sushi Den")
               ],
             ),
           ),
@@ -417,4 +446,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
+  Row placesWidget(String img, String name) {}
 }
