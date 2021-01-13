@@ -128,7 +128,34 @@ class _MyHomePageState extends State<MyHomePage> {
                   "Find out what's cooking today!",
                   style: TextStyle(
                     color: Colors.grey,
-                    fontSize: 13,
+                    fontSize: 15,
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                SingleChildScrollView(
+                  padding: EdgeInsets.only(bottom: 20),
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.55,
+                        height: 350,
+                        padding: EdgeInsets.symmetric(
+                          vertical: 40,
+                          horizontal: 20,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              30,
+                            ),
+                          ),
+                          color: blue,
+                        ),
+                      )
+                    ],
                   ),
                 )
               ],
