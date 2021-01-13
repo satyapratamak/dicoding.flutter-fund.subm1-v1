@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering_app/Style.dart';
+import 'package:food_ordering_app/HotelPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -447,5 +448,80 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Row placesWidget(String img, String name) {}
+  Row placesWidget(String img, String name) {
+    return Row(
+      children: [
+        Container(
+          height: 100,
+          width: 100,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("asset/images/$img.png"),
+            ),
+          ),
+        ),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "$name",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Row(
+                children: [
+                  Icon(Icons.star, size: 20, color: Colors.orange),
+                  Icon(Icons.star, size: 20, color: Colors.orange),
+                  Icon(Icons.star, size: 20, color: Colors.orange),
+                  Icon(Icons.star, size: 20, color: Colors.orange),
+                  Icon(Icons.star, size: 20, color: Colors.orange),
+                ],
+              ),
+              Text(
+                "Authentic Sushi in Jakarta",
+                style: TextStyle(
+                  fontSize: 12,
+                ),
+              ),
+            ],
+          ),
+        ),
+        InkWell(
+          onTap: openHotelPage,
+          child: Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 10,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(40),
+              ),
+              color: greenBtn,
+            ),
+            child: Text(
+              "Order Now",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+        )
+      ],
+    );
+  }
+
+  void openHotelPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => HotelPage(),
+      ),
+    );
+  }
 }
