@@ -1,10 +1,75 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering_app/Style.dart';
-import 'package:food_ordering_app/HotelPage.dart';
+import 'package:food_ordering_app/screens/V_hotel_detail_screen.dart';
+import 'package:food_ordering_app/screens/V_hotel_list_screen.dart';
+//import 'package:grouped_list/grouped_list.dart';
 
 void main() {
   runApp(MyApp());
 }
+
+// List _dataDummy = [
+//   {
+//     "albumId": 1,
+//     "id": 1,
+//     "title": "Flutter",
+//     "url": "https://via.placeholder.com/600/92c952",
+//     "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+//     "author": "Satya P.K",
+//     "date": "14/01/2021",
+//     "group": "Flutter",
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 2,
+//     "title": "Android",
+//     "url": "https://via.placeholder.com/600/771796",
+//     "thumbnailUrl": "https://via.placeholder.com/150/771796",
+//     "author": "Satya P.K",
+//     "date": "14/01/2021",
+//     "group": "Android",
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 3,
+//     "title": "IOS",
+//     "url": "https://via.placeholder.com/600/24f355",
+//     "thumbnailUrl": "https://via.placeholder.com/150/24f355",
+//     "author": "Satya P.K",
+//     "date": "14/01/2021",
+//     "group": "IOS",
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 4,
+//     "title": "React Native",
+//     "url": "https://via.placeholder.com/600/d32776",
+//     "thumbnailUrl": "https://via.placeholder.com/150/d32776",
+//     "author": "Satya P.K",
+//     "date": "14/01/2021",
+//     "group": "React Native",
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 5,
+//     "title": "Python",
+//     "url": "https://via.placeholder.com/600/f66b97",
+//     "thumbnailUrl": "https://via.placeholder.com/150/f66b97",
+//     "author": "Satya P.K",
+//     "date": "14/01/2021",
+//     "group": "Python",
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 6,
+//     "title": "ReactJS",
+//     "url": "https://via.placeholder.com/600/56a8c2",
+//     "thumbnailUrl": "https://via.placeholder.com/150/56a8c2",
+//     "author": "Satya P.K",
+//     "date": "14/01/2021",
+//     "group": "ReactJS",
+//   },
+// ];
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -26,6 +91,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  HotelList hotelList = HotelList();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: <Widget>[
                 SizedBox(
                   height: 20,
                 ),
@@ -439,7 +505,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   height: 20,
                 ),
-                placesWidget("hotel1", "Sushi Den")
+                placesWidget("hotel1", "Sushi Den"),
+                SizedBox(
+                  height: 20,
+                ),
+                placesWidget("hotel2", "Hatsuhana Sushi"),
+                SizedBox(
+                  height: 20,
+                ),
+                placesWidget("hotel3", "Sushi Maaki"),
+                /*Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    new Flexible(
+                      child: hotelList,
+                    )
+                  ],
+                ),*/
               ],
             ),
           ),
@@ -447,6 +529,22 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
+  // Container placesWidgetList() {
+  //   return Container(
+  //     child: GroupedListView<dynamic, String>(
+  //       elements: _dataDummy,
+  //       groupBy: (element) => element['group'],
+  //       groupSeparatorBuilder: (String groupByValue) => Text(groupByValue),
+  //       itemBuilder: (context, dynamic element) => Text(element['name']),
+  //       itemComparator: (item1, item2) =>
+  //           item1['name'].compareTo(item2['name']), // optional
+  //       useStickyGroupSeparators: true, // optional
+  //       floatingHeader: true, // optional
+  //       order: GroupedListOrder.ASC, // optional
+  //     ),
+  //   );
+  // }
 
   Row placesWidget(String img, String name) {
     return Row(
@@ -520,7 +618,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => HotelPage(),
+        builder: (context) => HotelDetailScreen(),
       ),
     );
   }
